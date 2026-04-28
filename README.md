@@ -12,7 +12,7 @@ It helps you manage your projects and check analytics right from your phone.
 
 **Disclaimer:** Unofficial app for Modrinth. Not affiliated with or endorsed by Modrinth.
 
-## Screenshots
+## Screenshots (Rinthy App)
 
 <div align="center">
   <img src="./docs/screenshots/login.png" width="280" alt="Login" />
