@@ -3,8 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Github, MessageCircle } from "lucide-react";
 import { useI18n } from "../i18n/I18nContext";
 import { usePerformanceProfile } from "../hooks/usePerformanceProfile";
-import LanguageSwitcher from "./LanguageSwitcher";
-import OneMonthCountdownNavButton from "./OneMonthCountdownNavButton";
 
 export default function Navbar() {
 
@@ -73,7 +71,9 @@ export default function Navbar() {
           ))}
         </div>
 
+
         <div className="hidden md:flex items-center gap-4">
+
           <a
             href="https://github.com/imsawiq/Rinthy"
             target="_blank"
@@ -92,25 +92,13 @@ export default function Navbar() {
             <MessageCircle size={16} />
             <span>{t.nav.discord}</span>
           </a>
-          <OneMonthCountdownNavButton
-            onJump={() => {
-              const el = document.getElementById("one-month");
-              if (!el) return;
-              const top = el.getBoundingClientRect().top + window.scrollY - 96;
-              window.scrollTo({ top, behavior: "smooth" });
-            }}
-          />
 
 
-
-          <LanguageSwitcher />
         </div>
-
         <button
           className="md:hidden p-3 min-h-[44px] min-w-[44px] flex items-center justify-center"
           onClick={useCallback(() => setMobileOpen((prev) => !prev), [])}
           aria-label="Toggle menu"
-          aria-expanded={mobileOpen ? true : false}
         >
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -154,9 +142,7 @@ export default function Navbar() {
                   <MessageCircle size={16} />
                   <span>{t.footer.joinDiscord}</span>
                 </a>
-                <div className="pt-2">
-                  <LanguageSwitcher />
-                </div>
+
               </div>
             </motion.div>
           )}
@@ -193,9 +179,7 @@ export default function Navbar() {
                 <MessageCircle size={16} />
                 <span>{t.footer.joinDiscord}</span>
               </a>
-              <div className="pt-2">
-                <LanguageSwitcher />
-              </div>
+
             </div>
           </div>
         )

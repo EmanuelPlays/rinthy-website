@@ -4,7 +4,7 @@ import { Suspense, lazy } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import DownloadSection from "./components/DownloadSection";
-import OneMonthCountdownSection from "./components/OneMonthCountdownSection";
+
 import GradientOrbs from "./components/GradientOrbs";
 // import GoodbyeIsland from "./components/GoodbyeIsland";
 
@@ -24,7 +24,6 @@ function App() {
       <main>
         <Hero />
         <DownloadSection />
-        <OneMonthCountdownSection />
         <Suspense fallback={<div className="h-96" aria-hidden="true" />}>
           <Features />
         </Suspense>
