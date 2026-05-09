@@ -21,6 +21,7 @@ export interface Translations {
     features: string;
     screenshots: string;
     howItWorks: string;
+    download: string;
     tech: string;
     gitHub: string;
     discord: string;
@@ -80,18 +81,11 @@ export interface Translations {
       button: string;
     };
   };
-  shutdown?: {
-    navButtonTitle: string;
-    navButtonPrefix: string;
-    sectionPill: string;
-    sectionHeadlineDone: string;
-    sectionHeadlinePending: string;
-  };
-
   footer: {
     tagline: string;
     madeWith: string;
-    madeBy: string;
+    rinthyBy: string;
+    websiteBy: string;
     disclaimer: string;
     viewOnGitHub: string;
     joinDiscord: string;

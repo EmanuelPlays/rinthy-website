@@ -26,6 +26,7 @@ export const TODO: Translations = {
     features: "TODO",
     screenshots: "TODO",
     howItWorks: "TODO",
+    download: "TODO",
     tech: "TODO",
     gitHub: "GitHub",
     discord: "Discord",
@@ -104,7 +105,8 @@ export const TODO: Translations = {
 
     tagline: "TODO",
     madeWith: "TODO",
-    madeBy: "TODO",
+    rinthyBy: "TODO",
+    websiteBy: "TODO",
     disclaimer: "TODO",
     viewOnGitHub: "TODO",
     joinDiscord: "TODO",

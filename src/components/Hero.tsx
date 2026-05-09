@@ -51,9 +51,7 @@ export default function Hero() {
             className="flex flex-wrap gap-4"
           >
             <a
-              href="https://github.com/imsawiq/Rinthy/releases"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#download"
               className={`inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-modrinth-green text-modrinth-dark font-semibold hover:brightness-110 transition-all duration-300 ${enableGlows ? "glow-green-strong" : "glow-green-strong-subtle"}`}
             >
               <Smartphone size={18} />

@@ -4,7 +4,6 @@ import { Menu, X, Github, MessageCircle } from "lucide-react";
 import { useI18n } from "../i18n/I18nContext";
 import { usePerformanceProfile } from "../hooks/usePerformanceProfile";
 import LanguageSwitcher from "./LanguageSwitcher";
-import OneMonthCountdownNavButton from "./OneMonthCountdownNavButton";
 
 export default function Navbar() {
 
@@ -17,6 +16,7 @@ export default function Navbar() {
     { label: t.nav.features, href: "#features" },
     { label: t.nav.screenshots, href: "#screenshots" },
     { label: t.nav.howItWorks, href: "#how-it-works" },
+    { label: t.nav.download, href: "#download" },
     { label: t.nav.tech, href: "#tech" },
   ], [t.nav]);
 
@@ -35,13 +35,17 @@ export default function Navbar() {
     };
   }, []);
 
+  const mobileTopClass = enableBlur
+    ? "bg-modrinth-dark/72 backdrop-blur-md border-b border-white/[0.06] md:bg-transparent md:backdrop-blur-0 md:border-b-0"
+    : "bg-modrinth-dark/95 border-b border-white/[0.06] md:bg-transparent md:border-b-0";
+
   const glassClass = enableBlur
-    ? scrolled
+    ? scrolled || mobileOpen
       ? "glass-strong"
-      : "bg-transparent"
-    : scrolled
+      : mobileTopClass
+    : scrolled || mobileOpen
       ? "glass-strong-simple"
-      : "bg-transparent";
+      : mobileTopClass;
 
   return (
     <motion.nav
@@ -92,17 +96,6 @@ export default function Navbar() {
             <MessageCircle size={16} />
             <span>{t.nav.discord}</span>
           </a>
-          <OneMonthCountdownNavButton
-            onJump={() => {
-              const el = document.getElementById("one-month");
-              if (!el) return;
-              const top = el.getBoundingClientRect().top + window.scrollY - 96;
-              window.scrollTo({ top, behavior: "smooth" });
-            }}
-          />
-
-
-
           <LanguageSwitcher />
         </div>
 
