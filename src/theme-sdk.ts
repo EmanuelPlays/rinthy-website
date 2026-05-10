@@ -179,7 +179,7 @@ export function createThemeFromPreset(preset: ThemePreset, overrides: Partial<Th
  */
 export function createHarmoniousTheme(baseColor: string, options: { name: string; harmony?: 'complementary' | 'triadic' | 'analogous' }): ThemeConfig {
   // Simple color harmony implementation
-  const harmony = options.harmony || 'complementary';
+  // The harmony parameter is available for future use in color theory algorithms
 
   // For now, just create a basic theme with the base color
   // In a real implementation, you'd use color theory algorithms
@@ -263,12 +263,12 @@ export function generateThemeVariations(baseTheme: ThemeConfig, variations: ('li
 }
 
 // Simple color manipulation utilities (placeholders)
-function lightenColor(color: string, amount: number): string {
+function lightenColor(color: string, _amount: number): string {
   // Placeholder - would use a proper color library
   return color;
 }
 
-function darkenColor(color: string, amount: number): string {
+function darkenColor(color: string, _amount: number): string {
   // Placeholder - would use a proper color library
   return color;
 }

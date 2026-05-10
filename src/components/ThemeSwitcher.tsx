@@ -30,7 +30,7 @@ export default function ThemeSwitcher() {
         <Palette size={16} />
         <span className="hidden sm:inline">{themes[theme].name}</span>
         {theme === "light" && (
-          <AlertTriangle size={14} className="text-white" title="Light theme is very bright" />
+          <AlertTriangle size={14} className="text-white" aria-label="Light theme is very bright" />
         )}
       </button>
 
