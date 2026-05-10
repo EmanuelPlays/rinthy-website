@@ -95,7 +95,7 @@ function App() {
 
   return (
     <div>
-      {/* Your app content */}
+      Your app content
     </div>
   );
 }
