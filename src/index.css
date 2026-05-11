@@ -20,6 +20,13 @@
   html {
     scroll-behavior: smooth;
   }
+
+  /* Account for fixed navbar height when navigating to hash anchors */
+  section[id],
+  [id]:not(:has(section[id])) {
+    scroll-margin-top: 96px;
+  }
+
   body {
     font-family: 'Geist', system-ui, sans-serif;
     background-color: var(--theme-background);
