@@ -52,7 +52,6 @@ export default function App() {
 
           <main>
             <Hero />
-            <DownloadSection />
 
             <Suspense fallback={<LoadingFallback />}>
               <Features />
@@ -65,6 +64,8 @@ export default function App() {
             <Suspense fallback={<LoadingFallback />}>
               <Steps />
             </Suspense>
+
+            <DownloadSection />
 
             <Suspense fallback={<LoadingFallback />}>
               <TechStack />

@@ -72,7 +72,7 @@ const LanguageSwitcherInner = function LanguageSwitcher() {
             onClick={() => handleSelect(code)}
             className={`w-full text-left first:rounded-t-xl last:rounded-b-xl px-3 py-2 text-xs font-medium transition-all duration-200 flex items-center justify-between hover:bg-white/10 ${
               lang === code
-                ? "bg-gradient-to-r from-modrinth-green/80 to-modrinth-green text-black font-semibold shadow-glow-green-strong"
+                ? "bg-modrinth-green/15 text-modrinth-green font-semibold shadow-glow-green-strong"
                 : "text-modrinth-muted hover:text-white"
             }`}
             aria-label={`Switch to ${label}`}
