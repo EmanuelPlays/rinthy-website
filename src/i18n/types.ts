@@ -37,7 +37,17 @@ export type Translations = {
       title: string;
       desc: string;
     }>;
+    alpha: {
+      title: string;
+      subtitle: string;
+      cardFooter: string;
+      items: Array<{
+        title: string;
+        desc: string;
+      }>;
+    };
   };
+
   screenshots: {
     badge: string;
     title: string;
