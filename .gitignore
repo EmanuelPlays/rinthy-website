@@ -32,4 +32,6 @@ TODO.md
 # Misc
 .DS_Store
 Thumbs.db
+*.bak
+
 
